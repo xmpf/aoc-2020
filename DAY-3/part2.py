@@ -25,9 +25,9 @@ if __name__ == "__main__":
     totals = [ 0 for _ in moves ]
     print(totals)
     # processing
-    ix = 0
+    ix = -1
     for dx, dy in moves:
-        ix = (ix + 1) % len(totals)
+        ix += 1
         x = dx
         y = dy
         while x < height:
