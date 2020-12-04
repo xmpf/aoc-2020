@@ -6,10 +6,6 @@ from functools import reduce
 if __name__ == "__main__":
     # parse input
     data = [ line.rstrip() for line in open("input", "r").readlines() ]
-
-    # initial values
-    x = 0
-    y = 0
     
     # corners
     width = len(data[0])
