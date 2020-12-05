@@ -22,18 +22,18 @@ def solve(data):
         seats[row][col] = 1
     
     possible_seats = [
-        [1, 1, 1, 1, 1, 1, 0, 1],
-        [1, 1, 1, 1, 1, 0, 1, 1],
-        [1, 1, 1, 1, 0, 1, 1, 1],
-        [1, 1, 1, 0, 1, 1, 1, 1],
-        [1, 1, 0, 1, 1, 1, 1, 1],
         [1, 0, 1, 1, 1, 1, 1, 1],
+        [1, 1, 0, 1, 1, 1, 1, 1],
+        [1, 1, 1, 0, 1, 1, 1, 1],
+        [1, 1, 1, 1, 0, 1, 1, 1],
+        [1, 1, 1, 1, 1, 0, 1, 1],
+        [1, 1, 1, 1, 1, 1, 0, 1],
     ]
 
     seats_id = []
-    for layout in possible_seats:
+    for ix, layout in enumerate(possible_seats, 1):
         try:
-            seats_id.append( seats.index(layout) * 8 + layout.index(0) )
+            seats_id.append( seats.index(layout) * 8 + ix )
         except ValueError:
             continue
     
